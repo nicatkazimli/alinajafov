@@ -294,3 +294,19 @@
   }
 
 }
+.accordion-header{
+  display:flex;
+  align-items:center;
+  justify-content:flex-start; /* soldan başlasın */
+  gap:8px;
+  text-align:left;
+  width:100%;
+}
+
+.accordion-header span:first-child{
+  white-space:nowrap; /* 1 sətrdə qalsın */
+}
+
+.arrow{
+  margin-left:auto; /* arrow sağa getsin */
+}
