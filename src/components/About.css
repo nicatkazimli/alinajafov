@@ -204,7 +204,7 @@
 @media(max-width:900px){
     .about-container{
         grid-template-columns:1fr;
-        width: 370px;
+        width: 320px;
         margin-left: -45px;
          position: relative;
     text-align: center;

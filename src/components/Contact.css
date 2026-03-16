@@ -162,7 +162,7 @@ opacity:.7;
 /* MOBILE RESPONSIVE */
 
 /* KIÇIK TELEFONLAR - 480px */
-@media (max-width:480px){
+@media (max-width:468px){
 
   .social-container{
     display: flex;
