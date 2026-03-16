@@ -208,7 +208,7 @@
         margin-left: -45px;
          position: relative;
     text-align: center;
-    padding: 15px 55px;
+    padding: 25px ;
     border-radius: 15px;
     background: rgba(0, 230, 255, 0.1); /* şəffaf mavi ton */
     backdrop-filter: blur(8px); /* blur effekti */
@@ -270,7 +270,7 @@
 .about-container .accordion {
      position: relative;
     text-align: center;
-    padding: 15px 5px;
+    padding: 25px ;
     border-radius: 15px;
     background: rgba(0, 230, 255, 0.1); /* şəffaf mavi ton */
     backdrop-filter: blur(8px); /* blur effekti */
