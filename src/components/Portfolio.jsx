@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, memo } from "react";
 import "./Portfolio.css";
 
 const categories = [
@@ -55,23 +55,24 @@ const categories = [
   {
     title: "Təbiət",
     images: [
-     { img: "/tebiet1.jpg", desc: "Pambıq yığımı" },
-{ img: "/tebiet2.jpg", desc: "Səhər dumanı ilə örtülmüş yaylaq" },
-{ img: "/tebiet3.jpg", desc: "Axşamüstü çəkilişi" },
-{ img: "/tebiet4.jpg", desc: "Pambıq yığımı" },
-{ img: "/tebiet5.jpg", desc: "Qarlı dağ zirvələrində əyləncə" },
-{ img: "/tebiet6.jpg", desc: "Payız rəngləri ilə təbiət səhnəsi" },
+      { img: "/tebiet1.jpg", desc: "Pambıq yığımı" },
+      { img: "/tebiet2.jpg", desc: "Səhər dumanı ilə örtülmüş yaylaq" },
+      { img: "/tebiet3.jpg", desc: "Axşamüstü çəkilişi" },
+      { img: "/tebiet4.jpg", desc: "Pambıq yığımı" },
+      { img: "/tebiet5.jpg", desc: "Qarlı dağ zirvələrində əyləncə" },
+      { img: "/tebiet6.jpg", desc: "Payız rəngləri ilə təbiət səhnəsi" },
     ],
   }
 ];
 
-export default function Portfolio() {
+function Portfolio() {
+
   const [activeSlides, setActiveSlides] = useState(
     categories.map(() => 0)
   );
 
   const handlePrev = (catIndex) => {
-    setActiveSlides((prev) => {
+    setActiveSlides(prev => {
       const copy = [...prev];
       copy[catIndex] =
         copy[catIndex] === 0
@@ -82,7 +83,7 @@ export default function Portfolio() {
   };
 
   const handleNext = (catIndex) => {
-    setActiveSlides((prev) => {
+    setActiveSlides(prev => {
       const copy = [...prev];
       copy[catIndex] =
         (copy[catIndex] + 1) % categories[catIndex].images.length;
@@ -91,15 +92,25 @@ export default function Portfolio() {
   };
 
   return (
+
     <section id="portfolio" className="portfolio-section">
+
       <h2 className="portfolio-title">Portfolio</h2>
+
       <div className="portfolio-grid">
+
         {categories.map((cat, i) => (
+
           <div key={i} className="grid-slider">
+
             <h3 className="category-title">{cat.title}</h3>
+
             <div className="slider">
+
               {cat.images.map((imgObj, j) => {
+
                 let className = "slide";
+
                 if (j === activeSlides[i]) className += " activeSlide";
                 else if (j === (activeSlides[i] - 1 + cat.images.length) % cat.images.length)
                   className += " prevSlide";
@@ -107,24 +118,38 @@ export default function Portfolio() {
                   className += " nextSlide";
 
                 return (
+
                   <div className={className} key={j}>
-                    <img src={imgObj.img} alt={imgObj.desc} />
+
+                    <img
+                      src={imgObj.img}
+                      alt={imgObj.desc}
+                      loading="lazy"
+                    />
+
                     <h4>{imgObj.desc}</h4>
+
                   </div>
+
                 );
+
               })}
+
             </div>
 
-            {/* Slider Controls */}
-            <button className="prev" onClick={() => handlePrev(i)}>
-              ‹
-            </button>
-            <button className="next" onClick={() => handleNext(i)}>
-              ›
-            </button>
+            <button className="prev" onClick={() => handlePrev(i)}>‹</button>
+            <button className="next" onClick={() => handleNext(i)}>›</button>
+
           </div>
+
         ))}
+
       </div>
+
     </section>
+
   );
+
 }
+
+export default memo(Portfolio);
