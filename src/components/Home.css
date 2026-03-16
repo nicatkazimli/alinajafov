@@ -78,6 +78,7 @@
     0 0 15px rgba(255,255,255,0.1);
 }
 .home-text {
+  margin-left: 25px;
   flex: 1;
   position: relative;
   z-index: 2;
@@ -197,7 +198,7 @@ text-decoration: none;
 
 /* Right Image */
 .home-image {
-    margin-left: -100px;
+    margin-left: -60px;
   flex: 1;
   display: flex;
   justify-content: flex-end;
@@ -205,7 +206,8 @@ text-decoration: none;
 }
 
 .home-image img {
-  width: 450px;
+  margin-left: -40px;
+  width: 440px;
   max-width: 100%;
   border-radius: 20px;
   box-shadow: 0 0 40px rgba(0,0,0,0.6),

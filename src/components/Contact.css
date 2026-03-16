@@ -130,33 +130,34 @@ background:#25d366;
 /* STATS */
 
 .stats{
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+    flex-wrap:nowrap;
+    padding:0 10px;
+  }
 
-display:flex;
-gap:60px;
-flex-wrap:wrap;
-justify-content:center;
+  .stat-box{
+    text-align:center;
+    flex:1;
+    padding:15px;
+    border-radius:10px;
+    background: linear-gradient(135deg, #2c3d3f, #06101f);
+    color:white;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor:pointer;
+    box-shadow:8px 10px 15px rgba(68, 21, 78, 0.4);
+  }
 
-}
+  .stat-box h2{
+    font-size:26px;
+    margin-bottom:8px;
+  }
 
-.stat-box{
-
-text-align:center;
-
-}
-
-.stat-box h2{
-
-font-size:40px;
-margin-bottom:8px;
-color:#00e5ff;
-
-}
-
-.stat-box p{
-
-opacity:.7;
-
-}
+  .stat-box:hover{
+    transform: scale(1.1) rotate(5deg);
+    box-shadow:8px 10px 15px rgba(68, 21, 78, 0.4);
+  }
 
 
 /* MOBILE RESPONSIVE */
