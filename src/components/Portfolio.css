@@ -171,6 +171,9 @@ body {
 
 /* Responsive */
 @media (max-width: 900px) {
+  .portfolio-section{
+    margin-top: -150px;
+  }
   .portfolio-grid {
     grid-template-columns: 1fr;
   }
