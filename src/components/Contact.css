@@ -165,24 +165,25 @@ opacity:.7;
 @media (max-width:468px){
 
   .social-container{
-    display: flex;
-    flex-wrap: wrap;       /* 2x2 grid üçün wrap */
-    justify-content: space-between;
-    margin-top: 10px;
-    gap:15px;              /* kartlar arasında məsafə */
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    margin-top:10px;
+    gap:15px;
   }
 
   .social-card{
-    flex: 0 0 48%;         /* hər sətrdə 2 kart */
+    width:48%; /* 2/2 qalması üçün əsas fix */
     height:70px;
-    display: flex;
-    margin-top: 20px;
-    align-items: center;
-    justify-content: flex-start; /* icon solda, text sağda */
+    display:flex;
+    margin-top:20px;
+    align-items:center;
+    justify-content:flex-start;
     padding:0 10px;
     border-radius:8px;
     transition: transform 0.9s ease;
-    transform: rotate(0deg);     /* normal dayansın */
+    transform: rotate(0deg);
+    box-sizing:border-box;
   }
 
   .social-card svg{
@@ -190,17 +191,24 @@ opacity:.7;
     margin-right:8px;
   }
 
+  /* sosial textlər mobil üçün */
+  .social-card span,
+  .social-card p,
+  .social-card a{
+    font-size:13px;
+  }
+
   .stats{
-    display: flex;
-    justify-content: space-between; /* 3-ü yan-yana */
+    display:flex;
+    justify-content:space-between;
     gap:20px;
-    flex-wrap: nowrap; /* alt sətrə düşməsin */
+    flex-wrap:nowrap;
     padding:0 10px;
   }
 
   .stat-box{
     text-align:center;
-    flex: 1; /* bərabər genişlik */
+    flex:1;
     padding:15px;
     border-radius:10px;
     background: linear-gradient(135deg, #2c3d3f, #06101f);
@@ -211,35 +219,37 @@ opacity:.7;
   }
 
   .stat-box h2{
-    font-size:28px;
+    font-size:26px;
     margin-bottom:8px;
   }
 
   .stat-box:hover{
-    transform: scale(1.1) rotate(5deg); /* ejdaha hover effekti */
-   box-shadow:8px 10px 15px rgba(68, 21, 78, 0.4);
+    transform: scale(1.1) rotate(5deg);
+    box-shadow:8px 10px 15px rgba(68, 21, 78, 0.4);
   }
-  .contact-header h1 {
-    font-size: 35px;
+
+  .contact-header h1{
+    font-size:32px;
   }
-   .contact-header{
-    position: relative;
-    text-align: center;
-    padding: 25px 15px;
-    border-radius: 15px;
-    background: rgba(0, 230, 255, 0.1); /* şəffaf mavi ton */
-    backdrop-filter: blur(8px); /* blur effekti */
-    -webkit-backdrop-filter: blur(8px); /* safari üçün */
-    box-shadow: 0 8px 25px rgba(0,0,0,0.3); /* yumşaq shadow */
-    transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
-    border: 1px solid rgba(0,230,255,0.4); /* incə border */
+
+  .contact-header{
+    position:relative;
+    text-align:center;
+    padding:25px 15px;
+    border-radius:15px;
+    background:rgba(0, 230, 255, 0.1);
+    backdrop-filter:blur(8px);
+    -webkit-backdrop-filter:blur(8px);
+    box-shadow:0 8px 25px rgba(0,0,0,0.3);
+    transition:all 0.4s cubic-bezier(0.4,0,0.2,1);
+    border:1px solid #00e6ff66;
   }
 
   .contact-header:hover{
-    transform: scale(1.05) rotate(1deg); /* yüngül böyümə + rotate */
-    box-shadow: 0 15px 35px rgba(0,0,0,0.45); /* shadow artır */
-    background: rgba(0, 230, 255, 0.2); /* hover zamanı daha canlı */
-    border: 1px solid rgba(0,255,255,0.6);
+    transform:scale(1.05) rotate(1deg);
+    box-shadow:0 15px 35px rgba(0,0,0,0.45);
+    background:rgba(0, 230, 255, 0.2);
+    border:1px solid rgba(0,255,255,0.6);
   }
 
 }
