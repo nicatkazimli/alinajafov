@@ -295,18 +295,21 @@
 
 }
 .accordion-header{
+  position: relative;
   display:flex;
   align-items:center;
-  justify-content:flex-start; /* soldan başlasın */
-  gap:8px;
   text-align:left;
   width:100%;
+  padding-right:30px; /* arrow üçün yer saxlayır */
 }
 
 .accordion-header span:first-child{
-  white-space:nowrap; /* 1 sətrdə qalsın */
+  white-space:nowrap;
 }
 
 .arrow{
-  margin-left:auto; /* arrow sağa getsin */
+  position:absolute;
+  right:0; /* hamısı eyni məsafədə */
+  top:50%;
+  transform:translateY(-50%);
 }
