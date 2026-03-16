@@ -201,14 +201,14 @@
 }
 
 /* responsive */
-@media(max-width:900px){
+@media(max-width:468px){
     .about-container{
         grid-template-columns:1fr;
         width: 320px;
         margin-left: -45px;
          position: relative;
     text-align: center;
-    padding: 25px 15px;
+    padding: 15px 55px;
     border-radius: 15px;
     background: rgba(0, 230, 255, 0.1); /* şəffaf mavi ton */
     backdrop-filter: blur(8px); /* blur effekti */
@@ -270,7 +270,7 @@
 .about-container .accordion {
      position: relative;
     text-align: center;
-    padding: 25px 15px;
+    padding: 15px 5px;
     border-radius: 15px;
     background: rgba(0, 230, 255, 0.1); /* şəffaf mavi ton */
     backdrop-filter: blur(8px); /* blur effekti */
