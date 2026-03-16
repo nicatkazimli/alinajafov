@@ -21,7 +21,7 @@ const Contact = () => {
         setInsta(i);
       }
 
-      if (f < 500) {
+      if (f < 3000) {
         f += 10;
         setFb(f);
       }
