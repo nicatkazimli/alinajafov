@@ -16,10 +16,10 @@ const categories = [
     title: "Ad Günü",
     images: [
       { img: "/adgunu3.jpg", desc: "Doğum günü tədbiri" },
-      { img: "/adgunu2.jpg", desc: "Şamdan və dekorasiya" },
+      { img: "/adgunu2.jpg", desc: "Doğum günü və dekorasiya" },
       { img: "/adgunu1.jpg", desc: "Uşaqların sevinci" },
       { img: "/adgunu4.jpg", desc: "Foto köşkü anlar" },
-      { img: "/adgunu5.jpg", desc: "Əyləncə və oyunlar" },
+      { img: "/adgunu5.jpg", desc: "Doğum günü" },
     ],
   },
   {
