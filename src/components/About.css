@@ -22,11 +22,12 @@
 /* CONTAINER */
 .about-container{
     width: 100%;          /* mobil ekranı doldurur */
-    max-width: 340px;     /* çox geniş olmasın */
-    margin: 0 auto;       /* mərkəzləşdirir */
+    display: flex;   /* çox geniş olmasın */
     position: relative;
     text-align: center;
     padding: 25px;
+    height: 350px;
+    align-items: center;
     border-radius: 15px;
     background: rgba(0, 230, 255, 0.1); /* şəffaf mavi ton */
     backdrop-filter: blur(8px); /* blur effekti */
@@ -35,6 +36,9 @@
     transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
     border: 1px solid rgba(0,230,255,0.4); /* incə border */
     box-sizing: border-box; /* padding daxilində say */
+}
+.about-text{
+    width: 600px;
 }
 
 /* TEXT */
@@ -53,6 +57,7 @@
 
 /* ACCORDION */
 .accordion{
+    margin-left: 400px;
     width:100%;
 }
 
