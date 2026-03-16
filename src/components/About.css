@@ -1,17 +1,19 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* PAGE OPEN ANIMATION */
 .about{
     width:100%;
-   
     height:500px;
     background:#0a0a0a;
     color:white;
     padding:120px 80px;
     animation:pageOpen 0.8s ease forwards;
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    animation:slidePage 0.8s ease;
 }
 
 @keyframes pageOpen{
@@ -19,24 +21,30 @@
     to{ transform:translateX(0); opacity:1; }
 }
 
+@keyframes slidePage{
+    from{ transform:translateX(-120px); opacity:0; }
+    to{ transform:translateX(0); opacity:1; }
+}
+
 /* CONTAINER */
 .about-container{
-    width: 100%;          /* mobil ekranı doldurur */
-    display: flex;   /* çox geniş olmasın */
+    width: 100%;
+    display: flex;
     position: relative;
     text-align: center;
     padding: 25px;
     height: 350px;
     align-items: center;
     border-radius: 15px;
-    background: rgba(0, 230, 255, 0.1); /* şəffaf mavi ton */
-    backdrop-filter: blur(8px); /* blur effekti */
-    -webkit-backdrop-filter: blur(8px); /* safari üçün */
-    box-shadow: 0 8px 25px rgba(0,0,0,0.3); /* yumşaq shadow */
+    background: rgba(0, 230, 255, 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
     transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
-    border: 1px solid rgba(0,230,255,0.4); /* incə border */
-    box-sizing: border-box; /* padding daxilində say */
+    border: 1px solid rgba(0,230,255,0.4);
+    box-sizing: border-box;
 }
+
 .about-text{
     width: 600px;
 }
@@ -117,18 +125,6 @@
     line-height:1.6;
 }
 
-/* EXTRA PAGE ANIMATION */
-.about{
-   
-    color:white;
-    animation:slidePage 0.8s ease;
-}
-
-@keyframes slidePage{
-    from{ transform:translateX(-120px); opacity:0; }
-    to{ transform:translateX(0); opacity:1; }
-}
-
 /* ========================== */
 /* PHOTO SKILLS SECTION PREMIUM */
 /* ========================== */
@@ -178,7 +174,6 @@
     transition:0.4s;
 }
 
-/* glow sweep animation for premium feel */
 .progress-fill::after{
     content:"";
     position:absolute;
@@ -191,7 +186,6 @@
     animation:shine 2s infinite;
 }
 
-/* percentage label */
 .progress-fill::before{
     content: attr(data-percent) "%";
     position:absolute;
@@ -210,17 +204,19 @@
 
 @keyframes fillBar{
     from{ width:0; }
-    to{ width: var(--fill-width); } /* inline style in JSX */
+    to{ width: var(--fill-width); }
 }
 
-/* responsive */
-@media(max-width:468px){
- .about-container,
+/* ========================== */
+/* RESPONSIVE: ABOUT CONTAINER + ACCORDION */
+/* ========================== */
+@media(max-width:768px){
+  .about-container,
   .about-container .accordion{
-      width: 90%;              /* ekranın 90%-ni alır */
-      max-width: 340px;        /* çox geniş olmasın */
-      margin: 15px auto;       /* üst-alt spacing + mərkəzləşdirmə */
-      padding: 20px;           /* içəridə rahatlıq */
+      width: 90%;
+      max-width: 340px;
+      margin: 15px auto;
+      padding: 20px;
       position: relative;
       text-align: center;
       border-radius: 15px;
@@ -230,82 +226,18 @@
       box-shadow: 0 8px 25px rgba(0,0,0,0.3);
       transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
       border: 1px solid rgba(0,230,255,0.4);
-      box-sizing: border-box;  /* padding daxilində sayır */
+      box-sizing: border-box;
+      flex-direction: column;
+      align-items: center;
+      margin-left: 0; /* Kenara çıxma problemi */
   }
-
 }
 
-/* KIÇIK TELEFONLAR */
-@media (max-width:480px){
-
+@media(max-width:480px){
   .about-container,
   .about-container .accordion{
-      width: 95%;              /* ekranın 95%-i */
+      width: 95%;
       padding: 18px;
-      margin: 10px auto;       /* daha kompakt spacing */
+      margin: 10px auto;
   }
-
-}
-
-
-
-/* ... köhnə bütün CSS-in üstündəki hissələr qorunur ... */
-
-/* progress background */
-.progress{
-    width:100%;
-    height:12px;
-    background:rgba(255,255,255,0.08);
-    border-radius:20px;
-    overflow:hidden;
-    position:relative;
-    box-shadow:inset 0 0 5px rgba(0,0,0,0.3);
-}
-
-/* animated glow fill */
-.progress-fill{
-    height:100%;
-    border-radius:20px;
-    background: linear-gradient(90deg, #e7c8a0, #caa77d, #ffd79a);
-    box-shadow:0 0 15px rgba(231,200,160,0.4);
-    position:relative;
-    width:0;
-    animation: fillBar 2s ease forwards;
-}
-
-/* glow sweep animation for premium feel */
-.progress-fill::after{
-    content:"";
-    position:absolute;
-    top:0;
-    left:-50%;
-    width:50%;
-    height:100%;
-    background:rgba(255,255,255,0.2);
-    transform:skewX(-20deg);
-    animation:shine 2s infinite;
-}
-
-/* percentage label */
-.progress-fill::before{
-    content: attr(data-percent) "%";
-    position:absolute;
-    right:5px;
-    top:-25px;
-    font-size:14px;
-    font-weight:600;
-    color:#e7c8a0;
-}
-
-
-/* keyframes */
-@keyframes fillBar {
-    from { width:0; }
-    to { width: var(--fill-width); }
-}
-
-@keyframes shine {
-    0% { left:-50%; }
-    50% { left:100%; }
-    100% { left:-50%; }
 }
