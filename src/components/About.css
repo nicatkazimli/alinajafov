@@ -202,23 +202,39 @@
 
 /* responsive */
 @media(max-width:468px){
-    .about-container{
-        grid-template-columns:1fr;
-        width: 320px;
-        margin-left: -45px;
-         position: relative;
-    text-align: center;
-    padding: 25px ;
-    border-radius: 15px;
-    background: rgba(0, 230, 255, 0.1); /* şəffaf mavi ton */
-    backdrop-filter: blur(8px); /* blur effekti */
-    -webkit-backdrop-filter: blur(8px); /* safari üçün */
-    box-shadow: 0 8px 25px rgba(0,0,0,0.3); /* yumşaq shadow */
-    transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
-    border: 1px solid rgba(0,230,255,0.4); /* incə border */
-    }
+ .about-container,
+  .about-container .accordion{
+      width: 90%;              /* ekranın 90%-ni alır */
+      max-width: 340px;        /* çox geniş olmasın */
+      margin: 15px auto;       /* üst-alt spacing + mərkəzləşdirmə */
+      padding: 20px;           /* içəridə rahatlıq */
+      position: relative;
+      text-align: center;
+      border-radius: 15px;
+      background: rgba(0, 230, 255, 0.1);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+      transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
+      border: 1px solid rgba(0,230,255,0.4);
+      box-sizing: border-box;  /* padding daxilində sayır */
+  }
 
 }
+
+/* KIÇIK TELEFONLAR */
+@media (max-width:480px){
+
+  .about-container,
+  .about-container .accordion{
+      width: 95%;              /* ekranın 95%-i */
+      padding: 18px;
+      margin: 10px auto;       /* daha kompakt spacing */
+  }
+
+}
+
+
 
 /* ... köhnə bütün CSS-in üstündəki hissələr qorunur ... */
 
@@ -267,18 +283,7 @@
     font-weight:600;
     color:#e7c8a0;
 }
-.about-container .accordion {
-     position: relative;
-    text-align: center;
-    padding: 25px ;
-    border-radius: 15px;
-    background: rgba(0, 230, 255, 0.1); /* şəffaf mavi ton */
-    backdrop-filter: blur(8px); /* blur effekti */
-    -webkit-backdrop-filter: blur(8px); /* safari üçün */
-    box-shadow: 0 8px 25px rgba(0,0,0,0.3); /* yumşaq shadow */
-    transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
-    border: 1px solid rgba(0,230,255,0.4); /* incə border */
-}
+
 
 /* keyframes */
 @keyframes fillBar {
