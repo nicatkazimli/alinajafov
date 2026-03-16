@@ -85,7 +85,7 @@ const Contact = () => {
         </div>
 
         <div className="stat-box">
-          <h2>{fb >= 500 ? "0.5K" : fb}</h2>
+          <h2>{fb >= 3000 ? "3K" : fb}</h2>
           <p>Facebook Followers</p>
         </div>
 
