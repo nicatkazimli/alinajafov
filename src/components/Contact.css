@@ -162,7 +162,7 @@ opacity:.7;
 /* MOBILE RESPONSIVE */
 
 /* KIÇIK TELEFONLAR - 480px */
-@media (max-width:468px){
+@media (max-width:500px){
 
   .social-container{
     display:flex;
@@ -173,7 +173,7 @@ opacity:.7;
   }
 
   .social-card{
-    width:48%; /* 2/2 qalması üçün əsas fix */
+    width:calc(50% - 10px); /* əsas fix */
     height:70px;
     display:flex;
     margin-top:20px;
@@ -191,7 +191,6 @@ opacity:.7;
     margin-right:8px;
   }
 
-  /* sosial textlər mobil üçün */
   .social-card span,
   .social-card p,
   .social-card a{
@@ -243,6 +242,7 @@ opacity:.7;
     box-shadow:0 8px 25px rgba(0,0,0,0.3);
     transition:all 0.4s cubic-bezier(0.4,0,0.2,1);
     border:1px solid #00e6ff66;
+    
   }
 
   .contact-header:hover{
