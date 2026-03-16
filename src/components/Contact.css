@@ -1,0 +1,245 @@
+.contact{
+
+min-height:100vh;
+background:linear-gradient(160deg,#0f0f0f,#1b1b1b);
+background:#0a0a0a;
+color:white;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+padding:100px 20px;
+
+}
+
+.contact-header{
+
+text-align:center;
+max-width:700px;
+margin-bottom:60px;
+
+}
+
+.contact-header h1{
+
+font-size:48px;
+margin-bottom:20px;
+letter-spacing:2px;
+
+}
+
+.contact-header p{
+
+opacity:.8;
+line-height:1.6;
+
+}
+
+.contact-sub{
+
+margin-top:10px;
+color:#9ca3af;
+
+}
+
+
+/* SOCIAL CONTAINER */
+
+.social-container{
+
+display:flex;
+gap:30px;
+flex-wrap:wrap;
+justify-content:center;
+margin-bottom:80px;
+
+}
+
+
+/* SOCIAL CARD */
+
+.social-card{
+
+width:200px;
+height:80px;
+background:#1e1e1e;
+border-radius:12px;
+display:flex;
+align-items:center;
+justify-content:center;
+gap:12px;
+font-size:18px;
+cursor:pointer;
+text-decoration:none;
+color:white;
+
+box-shadow:8px 10px 15px rgba(68, 21, 78, 0.4);
+
+transition: transform .4s ease, box-shadow .4s ease, background .3s ease;
+
+}
+
+
+/* ICON SIZE */
+
+.social-card svg{
+
+font-size:24px;
+
+}
+
+
+/* HOVER EFFECT */
+
+.social-card:hover{
+
+transform: rotate(-8deg) scale(1.1) translateY(-8px);
+box-shadow:0 20px 40px rgba(0,0,0,.6);
+
+}
+
+
+/* INDIVIDUAL COLORS */
+
+.facebook:hover{
+
+background:#1877f2;
+
+}
+
+.instagram:hover{
+
+background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);
+
+}
+
+.tiktok:hover{
+
+background:#000;
+border:1px solid #25f4ee;
+
+}
+
+.whatsapp:hover{
+
+background:#25d366;
+
+}
+
+
+/* STATS */
+
+.stats{
+
+display:flex;
+gap:60px;
+flex-wrap:wrap;
+justify-content:center;
+
+}
+
+.stat-box{
+
+text-align:center;
+
+}
+
+.stat-box h2{
+
+font-size:40px;
+margin-bottom:8px;
+color:#00e5ff;
+
+}
+
+.stat-box p{
+
+opacity:.7;
+
+}
+
+
+/* MOBILE RESPONSIVE */
+
+/* KIÇIK TELEFONLAR - 480px */
+@media (max-width:480px){
+
+  .social-container{
+    display: flex;
+    flex-wrap: wrap;       /* 2x2 grid üçün wrap */
+    justify-content: space-between;
+    margin-top: 10px;
+    gap:15px;              /* kartlar arasında məsafə */
+  }
+
+  .social-card{
+    flex: 0 0 48%;         /* hər sətrdə 2 kart */
+    height:70px;
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: flex-start; /* icon solda, text sağda */
+    padding:0 10px;
+    border-radius:8px;
+    transition: transform 0.9s ease;
+    transform: rotate(0deg);     /* normal dayansın */
+  }
+
+  .social-card svg{
+    font-size:20px;
+    margin-right:8px;
+  }
+
+  .stats{
+    display: flex;
+    justify-content: space-between; /* 3-ü yan-yana */
+    gap:20px;
+    flex-wrap: nowrap; /* alt sətrə düşməsin */
+    padding:0 10px;
+  }
+
+  .stat-box{
+    text-align:center;
+    flex: 1; /* bərabər genişlik */
+    padding:15px;
+    border-radius:10px;
+    background: linear-gradient(135deg, #2c3d3f, #06101f);
+    color:white;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor:pointer;
+    box-shadow:8px 10px 15px rgba(68, 21, 78, 0.4);
+  }
+
+  .stat-box h2{
+    font-size:28px;
+    margin-bottom:8px;
+  }
+
+  .stat-box:hover{
+    transform: scale(1.1) rotate(5deg); /* ejdaha hover effekti */
+   box-shadow:8px 10px 15px rgba(68, 21, 78, 0.4);
+  }
+  .contact-header h1 {
+    font-size: 35px;
+  }
+   .contact-header{
+    position: relative;
+    text-align: center;
+    padding: 25px 15px;
+    border-radius: 15px;
+    background: rgba(0, 230, 255, 0.1); /* şəffaf mavi ton */
+    backdrop-filter: blur(8px); /* blur effekti */
+    -webkit-backdrop-filter: blur(8px); /* safari üçün */
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3); /* yumşaq shadow */
+    transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
+    border: 1px solid rgba(0,230,255,0.4); /* incə border */
+  }
+
+  .contact-header:hover{
+    transform: scale(1.05) rotate(1deg); /* yüngül böyümə + rotate */
+    box-shadow: 0 15px 35px rgba(0,0,0,0.45); /* shadow artır */
+    background: rgba(0, 230, 255, 0.2); /* hover zamanı daha canlı */
+    border: 1px solid rgba(0,255,255,0.6);
+  }
+
+}
